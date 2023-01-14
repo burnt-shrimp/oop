@@ -1,3 +1,4 @@
+#include <cstdio>
 #include <iomanip>
 #include <iostream>
 #include <string>
@@ -8,6 +9,7 @@ class HangHoa {
   string TenH;
   int SoL;
   long DonG;
+  friend class Phieu;
 };
 
 class Phieu {
@@ -39,7 +41,8 @@ void Phieu::nhap() {
   for (int i = 0; i < n; i++) {
     cout << "Nhap hang hoa thu " << i + 1 << ": ";
     cin.ignore();
-    a[i].nhap();
+    cout << "Nhap ma hang: " ; fflush(stdin); getline(cin, MaH);
+    cout << "" ; fflush(stdin); getline(cin, MaH);
   }
 }
 
