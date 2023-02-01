@@ -1,4 +1,3 @@
-#include <cstdio>
 #include <iomanip>
 #include <iostream>
 #include <string>
@@ -30,7 +29,7 @@ class DN {
   string tenDN;
   Date ngayTL;
   DiaChi dc;
-  double doanhThu;
+  long doanhThu;
 
 public:
   void nhap();
@@ -57,7 +56,7 @@ void DN::nhap() {
 }
 
 void DN::xuat() {
-  cout << setw(10) << maDN << setw(15) << tenDN;
+  cout << setw(10) << maDN << setw(15) << tenDN << setw(15);
   ngayTL.xuat();
   cout << setw(15) << dc.thanhPho << setw(15) << doanhThu << endl;
 }

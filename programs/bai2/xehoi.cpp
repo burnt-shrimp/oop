@@ -10,7 +10,7 @@ class XeHoi {
   string MauSon;
   string NamSX;
   string XuatXu;
-  double GiaBan;
+  long GiaBan;
 
 public:
   void nhap();
@@ -51,7 +51,7 @@ void XeHoi::xuat() {
 
 void in_toyota(XeHoi *xh, int n) {
   for (int i = 0; i < n; i++) {
-    if (xh->HangSX.compare("Toyota") == 0) {
+    if (xh[i].HangSX.compare("Toyota") == 0) {
       xh[i].xuat();
     }
   }
@@ -81,14 +81,19 @@ int main() {
     xh[i].nhap();
   }
 
+  cout << "===========DANH SACH XE HOI============" << endl;
   cout << setw(5) << "Nhan hieu" << setw(15) << "HangSX" << setw(15)
        << "Kieu dang" << setw(15) << "Mau son" << setw(15) << "NamSX"
        << setw(15) << "Xuat xu" << setw(15) << "Gia ban" << endl;
+
   for (int i = 0; i < n; i++) {
     xh[i].xuat();
   }
 
+  cout << "HANG TOYOTA" << endl;
   in_toyota(xh, n);
+  
+  cout << "SAP XEP THEO GIA BAN" << endl;
   sx_giaban(xh, n);
 
   cout << "gia ban sau khi da sap xep: " << endl;
