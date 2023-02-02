@@ -63,7 +63,7 @@ void DN::xuat() {
 
 void in_hanoi(DN *dn, int n) {
   for (int i = 0; i < n; i++) {
-    if (dn->dc.thanhPho.compare("Ha Noi") == 0) {
+    if (dn[i].dc.thanhPho.compare("Ha Noi") == 0) {
       dn[i].xuat();
     }
   }
@@ -108,9 +108,11 @@ int main() {
 
   cout << "In TP Hanoi" << endl;
   in_hanoi(dn, n);
-  cout << "Tong doanh thu" << endl;
+
+  cout << endl;
   tong_dt(dn, n);
 
+  cout << endl;
   sua_ma(dn, n);
 
   cout << "in lai ds" << endl;
