@@ -37,7 +37,7 @@ void NHANSU::nhap() {
   NS.nhap();
 }
 void NHANSU::xuat() {
-  cout << setw(10) << MaNS << setw(15) << Hoten << setw(15);
+  cout << setw(10) << MaNS << setw(15) << Hoten << setw(10);
   NS.xuat();
 }
 
